@@ -67,8 +67,8 @@ func handleMyTasksCommand(user *User) string {
 			status = "❌"
 		}
 
-		response += fmt.Sprintf("%d. %s %s\n   📅 %s\n   📝 %s\n\n",
-			i+1, status, task.Title, formattedTime, task.Description)
+		response += fmt.Sprintf("%d. %s %s - 📝 %s\n   at 📅 %s\n\n",
+			i+1, status, task.Title, task.Description, formattedTime)
 	}
 
 	return response
