@@ -90,6 +90,8 @@ func main() {
 				responseText = handleSetTimezoneCommand(text, user)
 			} else if strings.HasPrefix(text, "/mytasks") {
 				responseText = handleMyTasksCommand(user)
+			} else if strings.HasPrefix(text, "/start") {
+				responseText = "Welcome to GoRemindBot! I'm here to help you create and manage reminders. Use /help to get started or /mytasks to view your tasks."
 			} else if strings.HasPrefix(text, "/help") {
 				responseText = handleHelpCommand()
 			} else if strings.ToLower(strings.TrimSpace(text)) == "done" {
